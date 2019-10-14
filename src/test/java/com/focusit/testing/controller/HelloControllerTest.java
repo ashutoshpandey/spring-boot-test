@@ -56,8 +56,6 @@ public class HelloControllerTest {
 
     @Test
     public void testHelloParamNegative() throws Exception {
-        String name = "test";
-
         this.mockMvc.perform(get("/hello"))
                 .andDo(print())
                 .andExpect(status().is4xxClientError());
@@ -65,8 +63,6 @@ public class HelloControllerTest {
 
     @Test
     public void testHelloPathNegative() throws Exception {
-        String name = "test2";
-
         this.mockMvc.perform(get("/hello-path"))
                 .andDo(print())
                 .andExpect(status().isNotFound());
