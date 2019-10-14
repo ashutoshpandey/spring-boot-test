@@ -1,7 +1,8 @@
-package com.focusit.testing.service;
+package com.focusit.testing.test.service;
 
 import com.focusit.testing.entity.Employee;
 import com.focusit.testing.respository.EmployeeRepository;
+import com.focusit.testing.service.EmployeeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

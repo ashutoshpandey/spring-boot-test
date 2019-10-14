@@ -13,7 +13,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping("/")
+    @GetMapping("/all")
     public ResponseEntity<?> getAllEmployees(){
         return ResponseEntity.ok(employeeService.getEmployees());
     }

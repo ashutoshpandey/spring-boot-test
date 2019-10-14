@@ -1,4 +1,4 @@
-package com.focusit.testing;
+package com.focusit.testing.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
