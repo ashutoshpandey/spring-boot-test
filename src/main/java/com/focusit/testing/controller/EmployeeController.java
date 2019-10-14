@@ -1,7 +1,6 @@
 package com.focusit.testing.controller;
 
-import com.focusit.testing.entity.Employee;
-import com.focusit.testing.respository.EmployeeRepository;
+import com.focusit.testing.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/employee")
 public class EmployeeController {
     @Autowired
-    private EmployeeRepository employeeRepository;
+    private EmployeeService employeeService;
 
     @GetMapping("/")
     public ResponseEntity<?> getAllEmployees(){
-        return ResponseEntity.ok(employeeRepository.findAll());
+        return ResponseEntity.ok(employeeService.getEmployees());
     }
 }
